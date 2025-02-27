@@ -1,10 +1,26 @@
 <div class="main-container">
-    <div *ngFor="let item of items">
+    <div *ngFor="let item of items" class="item-container" (click)="addToCart(item)">
         <div class="item-container">
             <div class="child-container">
                 <img [src]="item.img" width="120px" height="120px">
             </div>
+            <div class="title">{{item.title}}</div>
             <div class="price">{{item.price}}</div>
         </div>
     </div>
+<div class="cart-container">
+    <div class="cart-box">
+      <h1>My Cart</h1>
+      <p>Total items: {{ cartItems.length }}</p>
+      <button class="cart-button" (click)="toggleCart()">
+        {{ isCartExpanded ? 'Hide' : 'Expand' }}
+      </button>
+  
+      <div class="cart-items" *ngIf="isCartExpanded">
+        <ul  >
+          <li *ngFor="let cartItem of cartItems">{{ cartItem.title }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

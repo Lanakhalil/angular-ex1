@@ -1,7 +1,7 @@
 <div class="side-bar">
     <div class="list-container">
         <ul *ngFor="let item of items; let i = index">
-            <li [ngClass]="{'active': activeItemIndex===i}">{{item}}</li>
+            <li [ngClass]="{'active': activeItemIndex===i}" (click)="setActive(i)">{{item}}</li>
         </ul>
     </div>
 </div>
