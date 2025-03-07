@@ -1,0 +1,16 @@
+<div class="cart-container">
+    <div class="cart-box">
+      <h1>My Cart</h1>
+      <p>Total items: {{ cartItems.length }}</p>
+      <button class="cart-button" (click)="toggleCart()">
+        {{ isCartExpanded ? 'Hide' : 'Expand' }}
+      </button>
+  
+      <div class="cart-items" *ngIf="isCartExpanded">
+        <ul  >
+          <li *ngFor="let cartItem of cartItems">{{ cartItem.title }}</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>

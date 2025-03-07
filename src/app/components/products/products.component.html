@@ -1,0 +1,13 @@
+<div class="main-container">
+    <div *ngFor="let item of items" class="item-container" (click)="addToCart(item)">
+        <div class="item-container">
+            <div class="child-container">
+                <img [src]="item.img" width="120px" height="120px">
+            </div>
+            <div class="title">{{item.title}}</div>
+            <div class="price">{{item.price}}</div>
+        </div>
+
+       
+    </div>
+

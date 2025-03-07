@@ -1,7 +1,13 @@
 <div class="side-bar">
     <div class="list-container">
-        <ul *ngFor="let item of items; let i = index">
-            <li [ngClass]="{'active': activeItemIndex===i}" (click)="setActive(i)">{{item}}</li>
-        </ul>
+        <ul>
+            <li routerLink="/my-cart" routerLinkActive="active">My Cart</li>
+            <li routerLink="/products" routerLinkActive="active">Products</li>
+            <li routerLink="/about" routerLinkActive="active">About</li>
+            <li routerLink="/contact-us" routerLinkActive="active">Contact Us</li>
+          </ul>
     </div>
+    
 </div>
+
+
